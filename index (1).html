@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raed Shafei | Cybersecurity Specialist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Theme Toggle Logic
+          function toggleTheme() {
+            const body = document.body;
+            const current = body.classList.contains("dark") ? "dark" : "light";
+            const next = current === "dark" ? "light" : "dark";
+            body.classList.remove(current);
+            body.classList.add(next);
+            localStorage.setItem("theme", next);
+          }
+
+          // Load saved theme on page load
+          document.addEventListener("DOMContentLoaded", () => {
+            const saved = localStorage.getItem("theme") || "dark";
+            document.body.classList.add(saved);
+          });
+
+          // Confirmation message for form submission
+          function showConfirmation() {
+            document.getElementById("confirmation").style.display = "block";
+            return true;
+          }
+    </script>
+    <link rel="stylesheet" href="style_theme_toggle.css">
+</head>
+<body>
+<script>
+function showConfirmation() {
+    document.getElementById("confirmation").style.display = "block";
+    return true;
+}
+</script>
+<header>
+    <h1>Raed O. Shafei</h1>
+    <p>Cybersecurity & Risk Management Specialist</p>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Cybersecurity Specialist with over 2 years of experience currently working at the Ministry of Interior. I specialize in governance, risk management, compliance, and data protection. I’m also an IEEE-published researcher with a strong focus on data security and innovation.</p>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <h3>Ministry of Interior (Jan 2023 – Present)</h3>
+    <h3>Cybersecurity Specialist at Data Management Office</h3>
+    <ul>
+        <li>Ensuring compliance with governance, risk, and compliance frameworks to mitigate security risk.</li>
+        <li>Creating clear visualizations to transform complex data into actionable insights.</li>
+        <li>Implementing strategies to protect personal information and ensure data protection compliance.</li>
+        <li>Managing protocols to ensure critical data is accessible to authorized users.</li>
+        <li>Performing data analysis to identify trends and support decision-making.</li>
+        <li>Establishing and monitoring key performance indicators (KPIs) to evaluate cybersecurity effectiveness.</li>
+        <li>Developing and implementing strategic plans to monetize data assets, leveraging partnerships for data sharing and creating innovative service offerings that drive profitability</li>
+    </ul>
+    <h3>Risk Assessment & Management Specialist – MOI Technical Affairs</h3>
+    <ul><li>Committee Member for Risk Management & Assessment</li></ul>
+    <h3>HackathonX (Internship – May to Aug 2022)</h3>
+    <ul>
+        <li>Web application penetration testing</li>
+        <li>Full stack web & mobile development</li>
+    </ul>
+</section>
+
+<section id="certifications">
+    <h2>Certifications & Research</h2>
+    <ul>
+        <li>CompTIA Security+ (SY0-701)</li>
+        <li><a href="https://doi.org/10.1109/CICN56167.2022.10008341" target="_blank">"Ibn Omar Hash Algorithm" – IEEE Xplore, 2022</a></li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Programming:</strong> Python, SQL, Java, C++, C, HTML, CSS, JavaScript</p>
+    <p><strong>Tools:</strong> WireShark, Burp Suite, GitHub, Bitbucket, Postman, Power BI, MongoDB</p>
+    <p><strong>Operating Systems:</strong> Windows, macOS, Ubuntu, Linux</p>
+    <p><strong>Soft Skills:</strong> Leadership, Teamwork, Creativity, Writing</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="https://github.com/RaedShafei" target="_blank">GitHub – Personal and Research Projects</a></li>
+
+<li>
+    <a href="hash-demo-final.html" target="_blank">
+        Try the Ibn Omar Hash Algorithm – Interactive Demo
+    </a>
+</li>
+
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Ph.ROSh24@gmail.com">Ph.ROSh24@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/raed-shafei" target="_blank">Raed Shafei</a></p>
+    <p>Location: Riyadh, Saudi Arabia</p>
+</section>
+
+<section id="resume">
+    <h2>Download Resume</h2>
+    <p>You can download my latest resume here:</p>
+    <a href="RaedShafei-CV.pdf" download class="button">Download Resume (PDF)</a>
+</section>
+
+<section id="services">
+    <h2>Services Offered</h2>
+    <ul>
+        <li><strong>Risk Assessment & GRC Audits:</strong> Evaluate and align your organization with regulatory frameworks.</li>
+        <li><strong>Security Compliance & Consultation:</strong> NCA, and data protection compliance support.</li>
+        <li><strong>Web Application Penetration Testing:</strong> Identify and remediate vulnerabilities in your applications.</li>
+        <li><strong>Data and Business Analytics:</strong> KPIs and Data Services.</li>
+        <li><strong>Cybersecurity Tutoring:</strong> Educational sessions tailored to your needs.</li>
+    </ul>
+
+    <h3>Request a Service</h3>
+    <form action="https://formspree.io/f/xvgrzlgk" method="POST" onsubmit="return showConfirmation();">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="_replyto" required><br><br>
+
+        <label for="service">Service:</label><br>
+        <select id="service" name="service">
+            <option value="Risk Assessment">Risk Assessment & GRC Audits</option>
+            <option value="Compliance & Consulting">Security Compliance Consultation</option>
+            <option value="PenTesting">Web Application Penetration Testing</option>
+            <option value="Data">KPIs & Data Services</option>
+            <option value="Tutoring">Cybersecurity Training</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <!-- Honeypot Field -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="#confirmation">
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <div id="confirmation" style="display:none; padding: 20px; background-color: #2e7d32; border-radius: 5px; margin-top: 20px;">
+        <h3>Thank you!</h3>
+        <p>Your service request has been submitted successfully. I’ll be in touch shortly.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Raed Shafei. All rights reserved.</p>
+</footer>
+</body>
+</html>
