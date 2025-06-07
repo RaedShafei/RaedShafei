@@ -44,6 +44,14 @@ header h1 {
     color: var(--accent-color-dark);
 }
 
+body.light header h1 {
+    color: var(--accent-color-light);
+}
+
+body.dark header h1 {
+    color: var(--accent-color-dark);
+}
+
 header p {
     margin-top: 10px;
     font-size: 1.2em;
@@ -67,6 +75,14 @@ h2 {
     border-bottom: 2px solid var(--accent-color-dark);
     padding-bottom: 5px;
     margin-bottom: 15px;
+}
+
+body.light h2 {
+    color: var(--heading-color-light);
+}
+
+body.dark h2 {
+    color: var(--heading-color-dark);
 }
 
 a {
@@ -145,4 +161,8 @@ footer p {
         right: 10px;
         font-size: 0.8em;
     }
+}
+
+h2, header h1 {
+    transition: color 0.3s ease;
 }
