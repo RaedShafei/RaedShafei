@@ -1,0 +1,148 @@
+
+:root {
+    --bg-color-light: #f4f6f9;
+    --text-color-light: #2e2e2e;
+    --heading-color-light: #1a202c;
+    --accent-color-light: #2b6cb0;
+    --button-color-light: #3182ce;
+    --button-hover-light: #63b3ed;
+
+    --bg-color-dark: #1a1a1a;
+    --text-color-dark: #dcdcdc;
+    --heading-color-dark: #e8f1ff;
+    --accent-color-dark: #4ea8de;
+    --button-color-dark: #2b6cb0;
+    --button-hover-dark: #63b3ed;
+}
+
+body.light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header, footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--accent-color-dark);
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: var(--heading-color-dark);
+    border-bottom: 2px solid var(--accent-color-dark);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--accent-color-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    color: #eee;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color-dark);
+    box-shadow: 0 0 5px var(--accent-color-dark);
+}
+
+.button, button {
+    background-color: var(--button-color-dark);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover, button:hover {
+    background-color: var(--button-hover-dark);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--accent-color-dark);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid var(--accent-color-dark);
+    color: var(--accent-color-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .toggle-theme {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8em;
+    }
+}
