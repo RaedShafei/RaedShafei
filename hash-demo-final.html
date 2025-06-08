@@ -57,5 +57,33 @@
   <div class="center">
     <a href="https://github.com/RaedShafei/Ibn-Omar-Hash-Algorithm" target="_blank" class="btn">View on GitHub</a>
   </div>
+  
+  <script>
+    document.getElementById('hashForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const input = document.getElementById('inputText').value;
+      const resultBox = document.getElementById('result');
+      resultBox.textContent = 'Processing...';
+
+      fetch('https://ibnomarhash.fly.dev/hash', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: input })
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Server error");
+        return response.json();
+      })
+      .then(data => {
+        resultBox.textContent = `Hash: ${data.hash}`;
+      })
+      .catch(error => {
+        resultBox.textContent = 'An error occurred while hashing your input.';
+        console.error(error);
+      });
+    });
+  </script>
+  
 </body>
 </html>
